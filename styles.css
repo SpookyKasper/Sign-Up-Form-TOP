@@ -1,17 +1,26 @@
 body {
+  width: 100vh;
+  height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: aliceblue;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
-h2 {
-  margin: 0 auto;
+* {
+  border: 1px solid black;
 }
 
-form {
-  margin: 0 auto;
-  background-color: blue;
-  height: 250px;
-  width: 250px;
+.left {
+  grid-row: span 3;
+  border: 2px solid blue;
+  background-image: url(images/waterfall.jpg);
+  background-size: 200%;
+  background-repeat: no-repeat;
 }
+
+.right {
+  border: 2px solid red;
+}
+
