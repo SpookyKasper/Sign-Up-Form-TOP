@@ -1,8 +1,13 @@
+:root {
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  width: 100vh;
   height: 100vh;
+  margin: 0 160px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: aliceblue;
+  background-color: black;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -13,8 +18,9 @@ body {
 }
 
 .left {
-  grid-row: span 3;
   border: 2px solid blue;
+
+  grid-row: span 3;
   background-image: url(images/waterfall.jpg);
   background-size: 200%;
   background-repeat: no-repeat;
@@ -22,5 +28,15 @@ body {
 
 .right {
   border: 2px solid red;
+
+  grid-row: span 3;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main,
+footer {
+  height: 33.33%;
 }
 
