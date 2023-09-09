@@ -8,41 +8,51 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: black;
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 40% 60%;
 }
 
 * {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+}
+
+.left,
+.right {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .left {
-  grid-row: span 3;
   background-image: url(images/waterfall.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-
 .logo-section {
   display: flex;
   justify-content: center;
-  position: relative;
   background-color: rgba(6, 5, 32, 0.4);
-  margin-top: 20vh;
-  height: 15vh;
-  display: flex;
+  padding: 0 30px;
+  height: 40%;
 }
 
 .logo {
-  float: right;
-  width: 15vh;
-  background-image: url(images/logo.png);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
+  /* border: 3px solid orange; */
+}
+
+.logo img {
+  /* border: 2px solid orange; */
+  width: 100%;
+  height: 100%;
   filter: invert(1);
+}
+
+.upper-left-corner {
+  grid-row: span 1;
+  display:  flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .logo-txt {
@@ -52,11 +62,6 @@ body {
   font-family: 'OdinFont';
   color: white;
   font-size: clamp(24px, 8vh, 80px);
-}
-
-.right {
-  height: 100vh;
-  display: grid;
 }
 
 
@@ -72,14 +77,43 @@ header {
   justify-content: flex-end;
 }
 
-h2 {
+header p {
   padding: 40px;
-  margin: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: clamp(16px, 2vh, 24px);
-  width: 75%;
+  margin-bottom: 20px;
+  font-size: clamp(16px, 2.1vh, 32px);
+  max-width: 75%;
   color: rgb(28, 7, 7);
   line-height: 1.3;
+}
+
+form h2 {
+  width: 100%;
+  font-weight: 500;
+  padding-left: 40px;
+  margin: 20px 0 0 0
+}
+
+input,
+label {
+  appearance: none;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-row {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 3vh;
+  width: 250px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
 }
 
 @font-face {
