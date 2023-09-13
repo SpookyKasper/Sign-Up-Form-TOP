@@ -36,12 +36,12 @@ body {
   justify-content: center;
   background-color: rgba(6, 5, 32, 0.4);
   padding: 0 30px;
-  height: 15vh;
+  height: 150px;
+
 }
 
 .logo img {
-  height: auto;
-  width: 100%;
+  width: 130px;
   height: 100%;
   filter: invert(1);
 }
@@ -59,7 +59,7 @@ body {
   align-items: center;
   font-family: 'OdinFont';
   color: white;
-  font-size: clamp(24px, 8vh, 80px);
+  font-size: 80px;
 }
 
 
@@ -123,6 +123,12 @@ input:focus {
 
 input.error {
   outline: 1px solid red;
+}
+
+input.error + span::after {
+  color: rgb(227, 16, 16);
+  content: '*Passwords do not match';
+  font-size: 0.7rem;
 }
 
 .form-row {
