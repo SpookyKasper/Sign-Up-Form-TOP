@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="left">
+    <div class="upper-left-corner">
+      <div class="logo-section">
+        <div class="logo">
+          <img src="images/logo.png" alt="mask-logo">
+        </div>
+        <div class="logo-txt">
+          ODIN
+        </div>
+      </div>
+    </div>
+    <div class="credits">
+      <p>Photo by <a href="https://unsplash.com/@blakeverdoorn">Blake Verdoorn</a> on <a href="https://unsplash.com/">Unsplash</a>
+    </div>
+  </div>
+  <div class="right">
+    <header>
+      <p>
+        This is not a real online service! You know you need something <br>
+        like this in your life to help you realize your deepest dreams. <br>
+        Sign up <em>now</em> to get started. <br>
+        <br>
+        You <em>know</em> you want to.
+      </p>
+    </header>
+    <main>
+      <form action="" method="get" id="myForm">
+        <h2>Let's do this!</h2>
+        <div class="form-row">
+          <label for="f-name">First Name</label>
+          <input type="text" name="first-name" id="f-name">
+        </div>
+        <div class="form-row">
+          <label for="l-name">Last Name</label>
+          <input type="text" name="last-name" id="l-name">
+        </div>
+        <div class="form-row">
+          <label for="mail">Email</label>
+          <input type="email" name="email" id="mail">
+        </div>
+        <div class="form-row">
+          <label for="num">Phone Number</label>
+          <input type="tel" name="tel" id="tel">
+        </div>
+        <div class="form-row">
+          <label for="pass">Password</label>
+          <input type="text" name="pass" id="pass" class="password error">
+          <span></span>
+        </div>
+        <div class="form-row">
+          <label for="c-pass">Confirm Password</label>
+          <input type="text" name="c-pass" id="c-pass" class="confirm-password error">
+        </div>
+      </form>
+    </main>
+    <footer>
+      <button type="submit" class="main-button" form="myForm ">Create Account</button>
+      <p>Already have an account? <a href="">Log In</a>
+    </footer>
+  </div>
+
+  <script>
+    const password_el = document.querySelector('#pass')
+    const confirmPassword_el = document.querySelector('#c-pass')
+
+    function checkPasswordsMatch() {
+      password = password_el.value
+      confirm = confirmPassword_el.value
+      if (password == confirm && password.length != 0) {
+        password_el.classList.remove('error')
+        confirmPassword_el.classList.remove('error')
+      } else {
+        password_el.classList.add('error')
+        confirmPassword_el.classList.add('error')
+      }
+    }
+
+    password_el.addEventListener("input", checkPasswordsMatch);
+    confirmPassword_el.addEventListener("input", checkPasswordsMatch);
+
+  </script>
+</body>
+</html>
