@@ -3,18 +3,15 @@
 }
 
 body {
-  height: 100vh;
+  /* If you want to make it look closer to the picture uncomment the line below  */
   /* margin: 0 160px; */
+  height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   letter-spacing: 1px;
   background-color: black;
   display: grid;
   grid-template-columns: 40% 60%;
-}
-
-* {
-  /* border: 1px solid black; */
 }
 
 .left,
