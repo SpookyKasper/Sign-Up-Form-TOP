@@ -27,13 +27,16 @@
         <div class="logo-txt">
           ODIN
         </div>
+      </div>
     </div>
+    <div class="credits">
+      <p>Photo by <a href="https://unsplash.com/@blakeverdoorn">Blake Verdoorn</a> on <a href="https://unsplash.com/">Unsplash</a>
     </div>
   </div>
   <div class="right">
     <header>
       <p>
-        This is not a real online service! You know you need something
+        This is not a real online service! You know you need something <br>
         like this in your life to help you realize your deepest dreams. <br>
         Sign up <em>now</em> to get started. <br>
         <br>
@@ -41,7 +44,7 @@
       </p>
     </header>
     <main>
-      <form action="" method="get">
+      <form action="" method="get" id="myForm">
         <h2>Let's do this!</h2>
         <div class="form-row">
           <label for="f-name">First Name</label>
@@ -71,7 +74,8 @@
       </form>
     </main>
     <footer>
-      <button type="submit" class="main-button">Create Account</button>
+      <button type="submit" class="main-button" form="myForm ">Create Account</button>
+      <p>Already have an account? <a href="">Log In</a>
     </footer>
   </div>
 
@@ -82,7 +86,7 @@
     function checkPasswordsMatch() {
       password = password_el.value
       confirm = confirmPassword_el.value
-      if (password == confirm) {
+      if (password == confirm && password.length != 0) {
         password_el.classList.remove('error')
         confirmPassword_el.classList.remove('error')
       } else {
