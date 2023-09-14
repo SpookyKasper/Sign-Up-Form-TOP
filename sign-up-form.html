@@ -70,11 +70,29 @@
         </div>
       </form>
     </main>
-    <footer></footer>
+    <footer>
+      <button type="submit" class="main-button">Create Account</button>
+    </footer>
   </div>
 
   <script>
-    const passwordFields = document.querySelectorAll('.password')
+    const password_el = document.querySelector('#pass')
+    const confirmPassword_el = document.querySelector('#c-pass')
+
+    function checkPasswordsMatch() {
+      password = password_el.value
+      confirm = confirmPassword_el.value
+      if (password == confirm) {
+        password_el.classList.remove('error')
+        confirmPassword_el.classList.remove('error')
+      } else {
+        password_el.classList.add('error')
+        confirmPassword_el.classList.add('error')
+      }
+    }
+
+    password_el.addEventListener("input", checkPasswordsMatch);
+    confirmPassword_el.addEventListener("input", checkPasswordsMatch);
 
   </script>
 </body>

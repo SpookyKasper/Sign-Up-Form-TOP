@@ -41,7 +41,6 @@ body {
 }
 
 .logo img {
-  width: 130px;
   height: 100%;
   filter: invert(1);
 }
@@ -145,6 +144,19 @@ input {
   width: 250px;
   border: 1px solid gainsboro;
   border-radius: 3px;
+}
+
+.main-button {
+  color: white;
+  border: rgb(97,135,50);
+  background-color: rgb(97,135,50);
+  -webkit-text-stroke: 0.5px;
+  letter-spacing: 0.3px;
+  font-size: 1.1rem;
+  margin: 20px 40px;
+  padding: 15px 45px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @font-face {
